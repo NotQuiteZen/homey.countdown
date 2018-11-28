@@ -1,0 +1,182 @@
+{
+  "id": "homey.countdown",
+  "version": "1.0.4",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Countdown timers"
+  },
+  "description": {
+    "en": "Countdown timers for Homey",
+    "nl": "Countdown timers voor Homey"
+  },
+  "category": [
+    "tools"
+  ],
+  "author": {
+    "name": "Jeroen Bos",
+    "email": "jeroenbos22@gmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "jeroenbos22"
+      }
+    }
+  },
+  "flow": {
+      "triggers": [
+          {
+              "id": "specific_countdown_started",
+              "title": {
+                  "en": "A specific timer has started",
+                  "nl": "Een specifieke zandloper is gestart"
+              },
+              "args": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "placeholder": {
+                      "en": "Timername",
+                      "nl": "Naam zandloper"
+                    }
+                  }
+              ]
+          },
+          {
+              "id": "specific_countdown_stopped",
+              "title": {
+                  "en": "A specific timer has stopped",
+                  "nl": "Een specifieke zandloper is gestopt"
+              },
+              "args": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "placeholder": {
+                      "en": "Timername",
+                      "nl": "Naam zandloper"
+                    }
+                  }
+              ]
+          },
+          {
+              "id": "countdown_started",
+              "title": {
+                  "en": "A timer has started",
+                  "nl": "Een zandloper is gestart"
+              },
+              "tokens": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "title": {
+                        "en": "Timername",
+                        "nl": "Naam zandloper"
+                    },
+                    "example": {
+                      "en": "timer 1",
+                      "nl": "zandloper 1"
+                    }
+                }
+              ]
+          },
+          {
+              "id": "countdown_stopped",
+              "title": {
+                  "en": "A timer has finished",
+                  "nl": "Een zandloper is leeg"
+              },
+              "tokens": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "title": {
+                        "en": "Timername",
+                        "nl": "Naam zandloper"
+                    },
+                    "example": {
+                      "en": "timer 1",
+                      "nl": "zandloper 1"
+                    }
+                }
+              ]
+          }
+      ],
+      "conditions": [
+          {
+              "id": "countdown_active",
+              "title": {
+                  "en": "A timer is !{{|not}} running",
+                  "nl": "Zandloper loopt !{{|niet}}"
+              },
+              "args": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "placeholder": {
+                      "en": "Timername",
+                      "nl": "Naam zandloper"
+                    }
+                  }
+              ]
+          }
+      ],
+      "actions": [
+          {
+              "id": "countdown_update",
+              "title": {
+                  "en": "Start / update a timer",
+                  "nl": "Draai zandloper om"
+              },
+              "args": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "placeholder": {
+                      "en": "Timername",
+                      "nl": "Naam zandloper"
+                    }
+                  },
+                  {
+                    "name": "seconds",
+                    "type": "number",
+                    "placeholder": {
+                      "en": "seconds",
+                      "nl": "seconden"
+                    }
+                  }
+              ]
+          },
+          {
+              "id": "countdown_stop",
+              "title": {
+                  "en": "Stop a timer",
+                  "nl": "Stop een zandloper"
+              },
+              "args": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "placeholder": {
+                      "en": "Timername",
+                      "nl": "Naam zandloper"
+                    }
+                  }
+              ]
+          },
+          {
+              "id": "countdown_stop_all",
+              "title": {
+                  "en": "Stop all timers",
+                  "nl": "Stop alle zandlopers"
+              }
+          }
+      ]
+  },
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  }
+}
