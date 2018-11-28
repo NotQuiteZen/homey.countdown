@@ -7,14 +7,14 @@ const Homey = require('homey');
 let specificCountdownStarted = new Homey.FlowCardTrigger('specific_countdown_started');
 specificCountdownStarted
 	.registerRunListener(( args, state ) => {
-		return Promise.resolve( args.name.toLowerCase() === state.name.toLowerCase() ); // If names match, this flow should run
+		return Promise.resolve( (args.name && state.name) && args.name.toLowerCase() === state.name.toLowerCase() ); // If names match, this flow should run
 	})
 	.register()
 
 let specificCountdownStopped = new Homey.FlowCardTrigger('specific_countdown_stopped');
 specificCountdownStopped
 	.registerRunListener(( args, state ) => {
-		return Promise.resolve( args.name.toLowerCase() === state.name.toLowerCase() ); // If names match, this flow should run
+			return Promise.resolve( (args.name && state.name) && args.name.toLowerCase() === state.name.toLowerCase() ); // If names match, this flow should run	
 	})
 	.register()
 	
