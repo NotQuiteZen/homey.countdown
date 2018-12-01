@@ -1,4 +1,4 @@
-const Timers = require('./lib/timers');
+const {timerEvents, Timers} = require('./lib/timers');
 
 // Register actions
 const actionCountdownStop = require('./lib/actions/countdown_stop');
