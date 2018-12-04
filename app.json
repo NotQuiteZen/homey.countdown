@@ -4,11 +4,12 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Countdown timers"
+    "en": "Countdown timers",
+    "en": "Zandlopers"
   },
   "description": {
     "en": "Countdown timers for Homey",
-    "nl": "Countdown timers voor Homey"
+    "nl": "Zandlopers voor Homey"
   },
   "category": [
     "tools"
@@ -27,7 +28,7 @@
         "name": "Milan van As",
         "email": "milanvanas@gmail.com"
       }
-    ],
+    ]
   },
   "contributing": {
     "donate": {
