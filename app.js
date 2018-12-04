@@ -1,3 +1,5 @@
+'use strict';
+
 const {Timers} = require('./lib/timers');
 
 // Register actions
