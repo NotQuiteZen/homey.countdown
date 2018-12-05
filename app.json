@@ -5,7 +5,7 @@
   "sdk": 2,
   "name": {
     "en": "Countdown timers",
-    "en": "Zandlopers"
+    "nl": "Zandlopers"
   },
   "description": {
     "en": "Countdown timers for Homey",
@@ -42,8 +42,8 @@
       {
         "id": "specific_countdown_started",
         "title": {
-          "en": "A specific timer has started",
-          "nl": "Een specifieke zandloper is gestart"
+          "en": "Specific timer started",
+          "nl": "Specifieke zandloper gestart"
         },
         "args": [
           {
@@ -59,8 +59,8 @@
       {
         "id": "specific_countdown_stopped",
         "title": {
-          "en": "A specific timer has stopped",
-          "nl": "Een specifieke zandloper is gestopt"
+          "en": "Specific timer stopped",
+          "nl": "Specifieke zandloper gestopt"
         },
         "args": [
           {
@@ -172,7 +172,7 @@
             "name": "name",
             "type": "text",
             "placeholder": {
-              "en": "Timername",
+              "en": "Timer name",
               "nl": "Naam zandloper"
             }
           }
@@ -193,3 +193,4 @@
     "small": "/assets/images/small.png"
   }
 }
+
