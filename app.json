@@ -4,8 +4,7 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Countdown timers",
-    "nl": "Zandlopers"
+    "en": "Countdown timers"
   },
   "description": {
     "en": "Countdown timers for Homey",
@@ -59,8 +58,8 @@
       {
         "id": "specific_countdown_stopped",
         "title": {
-          "en": "Specific timer stopped",
-          "nl": "Specifieke zandloper gestopt"
+          "en": "Specific timer finished",
+          "nl": "Specifieke zandloper is leeg"
         },
         "args": [
           {
