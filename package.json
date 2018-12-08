@@ -1,0 +1,34 @@
+{
+  "name": "homey.countdown",
+  "version": "1.0.0",
+  "description": "Countdown app for Athom Homey",
+  "main": "false",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Milanzor/homey.countdown.git"
+  },
+  "keywords": [
+    "homey",
+    "app",
+    "countdown",
+    "athom"
+  ],
+  "author": "Milan van As <milanvanas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Milanzor/homey.countdown/issues"
+  },
+  "homepage": "https://github.com/Milanzor/homey.countdown#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "mock-require": "^3.0.2"
+  }
+}
