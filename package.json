@@ -10,6 +10,11 @@
   "scripts": {
     "test": "mocha ./test/**/*.test.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Milanzor/homey.countdown.git"
@@ -28,6 +33,7 @@
   "homepage": "https://github.com/Milanzor/homey.countdown#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "husky": "^1.2.0",
     "mocha": "^5.2.0",
     "mock-require": "^3.0.2"
   }
