@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg?branch=fixtriggers)](https://travis-ci.com/NotQuiteZen/homey.countdown)
+
 # Countdown timer
 
 With this app you can add countdown timers for Homey.
