@@ -1,6 +1,5 @@
 const {Timers} = require('./lib/timers');
 
-
 // Register actions
 const actionCountdownStop = require('./lib/actions/countdown_stop');
 const actionCountdownStopAll = require('./lib/actions/countdown_stop_all');
@@ -10,6 +9,7 @@ const actionCountdownUpdate = require('./lib/actions/countdown_update');
 const conditionActive = require('./lib/conditions/countdown_active');
 
 // Register triggers
+const triggerCountdownStarted = require('./lib/triggers/countdown_started');
 const triggerCountdownStopped = require('./lib/triggers/countdown_stopped');
 const triggerSpecificCountdownStopped = require('./lib/triggers/specific_countdown_stopped');
 const triggerSpecificCountdownStarted = require('./lib/triggers/specific_countdown_started');
