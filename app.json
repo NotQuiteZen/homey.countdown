@@ -56,6 +56,23 @@
         ]
       },
       {
+        "id": "specific_countdown_started_autocomplete",
+        "title": {
+          "en": "Specific timer started (autocomplete)",
+          "nl": "Specifieke zandloper gestart (autocomplete)"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timername",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
         "id": "specific_countdown_stopped",
         "title": {
           "en": "Specific timer finished",
@@ -65,6 +82,23 @@
           {
             "name": "name",
             "type": "text",
+            "placeholder": {
+              "en": "Timername",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
+        "id": "specific_countdown_stopped_autocomplete",
+        "title": {
+          "en": "Specific timer finished (autocomplete)",
+          "nl": "Specifieke zandloper is leeg (autocomplete)"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
             "placeholder": {
               "en": "Timername",
               "nl": "Naam zandloper"
@@ -132,6 +166,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "countdown_active_autocomplete",
+        "title": {
+          "en": "A timer is !{{|not}} running (autocomplete)",
+          "nl": "Zandloper loopt !{{|niet}}  (autocomplete)"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timername",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
       }
     ],
     "actions": [
@@ -161,6 +212,31 @@
         ]
       },
       {
+        "id": "countdown_update_autocomplete",
+        "title": {
+          "en": "Start / update a timer (autocomplete)",
+          "nl": "Draai zandloper om (autocomplete)"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timername",
+              "nl": "Naam zandloper"
+            }
+          },
+          {
+            "name": "seconds",
+            "type": "number",
+            "placeholder": {
+              "en": "seconds",
+              "nl": "seconden"
+            }
+          }
+        ]
+      },
+      {
         "id": "countdown_stop",
         "title": {
           "en": "Stop a timer",
@@ -170,6 +246,23 @@
           {
             "name": "name",
             "type": "text",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
+        "id": "countdown_stop_autocomplete",
+        "title": {
+          "en": "Stop a timer (autocomplete)",
+          "nl": "Stop een zandloper (autocomplete)"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
             "placeholder": {
               "en": "Timer name",
               "nl": "Naam zandloper"
