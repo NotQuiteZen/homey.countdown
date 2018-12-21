@@ -1,5 +1,10 @@
 # Countdown timers for Homey
-[![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg?branch=fixtriggers)](https://travis-ci.com/NotQuiteZen/homey.countdown) 
+[![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg?branch=beta)](https://travis-ci.com/NotQuiteZen/homey.countdown) 
+[![Open issues](https://img.shields.io/github/issues-raw/NotQuiteZen/homey.countdown.svg?colorB=blue)](https://github.com/NotQuiteZen/homey.countdown/issues) 
+[![Closed issues](https://img.shields.io/github/issues-closed-raw/NotQuiteZen/homey.countdown.svg?colorB=brightgreen)](https://github.com/NotQuiteZen/homey.countdown/issues?q=is%3Aissue+is%3Aclosed) 
+![Code size](https://img.shields.io/github/languages/code-size/NotQuiteZen/homey.countdown.svg)
+![Repo size](https://img.shields.io/github/repo-size/NotQuiteZen/homey.countdown.svg)
+
 
 The Countdown timers app for Athom's Homey provides hourglass-like timer cards in your Flows.
 
