@@ -42,8 +42,7 @@ This app adds the following cards to your Homey Flows:
 
 Want to help? Awesome!
 Just make a fork, clone it and start contributing.
-We use Husky for a pre-commit Unit Test hook, so make sure to run `npm install` after your `git clone` so all depencies get installed and set.
-Need a hand? Hit us up on @jeroenbos22 or @milanzor.
+We use Husky for a pre-commit Unit Test hook, so make sure to run `npm install` after your `git clone` so all depencies get installed and set. Need help? Scroll down to the `Contact` part of this readme.
 
 # Roadmap
 
