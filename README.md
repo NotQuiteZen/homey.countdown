@@ -1,11 +1,4 @@
 # Countdown timers for Homey
-[![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg?branch=beta)](https://travis-ci.com/NotQuiteZen/homey.countdown) 
-[![Open issues](https://img.shields.io/github/issues-raw/NotQuiteZen/homey.countdown.svg?colorB=blue)](https://github.com/NotQuiteZen/homey.countdown/issues) 
-[![Closed issues](https://img.shields.io/github/issues-closed-raw/NotQuiteZen/homey.countdown.svg?colorB=brightgreen)](https://github.com/NotQuiteZen/homey.countdown/issues?q=is%3Aissue+is%3Aclosed) 
-![Code size](https://img.shields.io/github/languages/code-size/NotQuiteZen/homey.countdown.svg)
-![Repo size](https://img.shields.io/github/repo-size/NotQuiteZen/homey.countdown.svg)
-
-
 The Countdown timers app for Athom's Homey provides hourglass-like timer cards in your Flows.
 
 # Version log
@@ -20,6 +13,7 @@ The Countdown timers app for Athom's Homey provides hourglass-like timer cards i
 
 # What does it do?
 This app adds the following cards to your Homey Flows:
+
 ### Triggers
 
 - A specific timer has started
@@ -54,3 +48,13 @@ We use Husky for a pre-commit Unit Test hook, so make sure to run `npm install` 
 
 Have a question or a bug report? Please file an issue on the Github repo. 
 You can also hit us up on Athom's Slack community at @jeroenbos22 or @milanzor, see you there!
+
+# Additionals
+
+[![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg)](https://travis-ci.com/NotQuiteZen/homey.countdown) 
+[![Open issues](https://img.shields.io/github/issues-raw/NotQuiteZen/homey.countdown.svg?colorB=blue)](https://github.com/NotQuiteZen/homey.countdown/issues) 
+[![Closed issues](https://img.shields.io/github/issues-closed-raw/NotQuiteZen/homey.countdown.svg?colorB=brightgreen)](https://github.com/NotQuiteZen/homey.countdown/issues?q=is%3Aissue+is%3Aclosed) 
+![Code size](https://img.shields.io/github/languages/code-size/NotQuiteZen/homey.countdown.svg)
+![Repo size](https://img.shields.io/github/repo-size/NotQuiteZen/homey.countdown.svg)
+
+
