@@ -1,6 +1,6 @@
 {
   "id": "homey.countdown",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -276,10 +276,29 @@
           "en": "Stop all timers",
           "nl": "Stop alle zandlopers"
         }
+      },
+      {
+        "id": "countdown_start_ledring",
+        "title": {
+          "en": "Show a timer on ledring",
+          "nl": "Toon een zandloper op de ledring"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
       }
     ]
   },
-  "permissions": [],
+  "permissions": [
+    "homey:manager:ledring"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"

@@ -6,6 +6,7 @@ const actionCountdownStopAutocomplete = require('./lib/actions/countdown_stop_au
 const actionCountdownStopAll = require('./lib/actions/countdown_stop_all');
 const actionCountdownUpdate = require('./lib/actions/countdown_update');
 const actionCountdownUpdateAutocomplete = require('./lib/actions/countdown_update_autocomplete');
+const actionCountdownStartLedringAutocomplete = require('./lib/actions/countdown_start_ledring');
 
 // Register conditions
 const conditionActive = require('./lib/conditions/countdown_active');
@@ -26,11 +27,13 @@ Timers.setCards([
     actionCountdownStopAll,
     actionCountdownUpdate,
     conditionActive,
+    conditionActiveAutocomplete,
     triggerCountdownStarted,
     triggerCountdownStopped,
     triggerSpecificCountdownStopped,
     triggerSpecificCountdownStarted,
     actionCountdownUpdateAutocomplete,
+    actionCountdownStartLedringAutocomplete,
     actionCountdownStopAutocomplete,
     triggerSpecificCountdownStoppedAutocomplete,
     triggerSpecificCountdownStartedAutcomplete,
