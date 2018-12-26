@@ -53,6 +53,10 @@ We use Husky for a pre-commit Unit Test hook, so make sure to run `npm install` 
 Have a question or a bug report? Please file an issue on the Github repo. 
 You can also hit us up on Athom's Slack community at @jeroenbos22 or @milanzor, see you there!
 
+# Acknowledgement
+
+The Countdown timers app is inspired by the original CountDown timer app by Ralf van Dooren. 
+
 # Additionals
 
 [![Build Status](https://travis-ci.com/NotQuiteZen/homey.countdown.svg)](https://travis-ci.com/NotQuiteZen/homey.countdown) 
