@@ -276,10 +276,36 @@
           "en": "Stop all timers",
           "nl": "Stop alle zandlopers"
         }
+      },
+      {
+        "id": "countdown_start_ledring",
+        "title": {
+          "en": "Show a timer on ledring",
+          "nl": "Toon een zandloper op de ledring"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
+        "id": "countdown_stop_ledring",
+        "title": {
+          "en": "Stop ledring animation",
+          "nl": "Stop ledring-weergave"
+        }
       }
     ]
   },
-  "permissions": [],
+  "permissions": [
+    "homey:manager:ledring"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
