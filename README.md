@@ -3,10 +3,13 @@ The Countdown timers app for Athom's Homey provides hourglass-like timer cards i
 
 # Version log
 
+### 1.2.1
+
+  - Added ledring-support, make a timer visible using the ledring
+
 ### 1.2.0
 
   - Restructured most of the code to make more sense and is more future-proof
-  - Added ledring-support, make a timer visible using the ledring
   - Fixes some triggers not properly triggering 
   - Adds autocomplete to certain Flow cards
       - **WARNING: Old Flow cards will still work for now, but have been marked as deprecated and will be removed in a future version. Please change your Flows to use the new autocomplete cards.**
