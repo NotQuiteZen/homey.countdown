@@ -40,6 +40,7 @@
     "triggers": [
       {
         "id": "specific_countdown_started",
+        "deprecated": true,
         "title": {
           "en": "Specific timer started (deprecated)",
           "nl": "Specifieke zandloper gestart (deprecated)"
@@ -74,6 +75,7 @@
       },
       {
         "id": "specific_countdown_stopped",
+        "deprecated": true,
         "title": {
           "en": "Specific timer finished (deprecated)",
           "nl": "Specifieke zandloper is leeg (deprecated)"
@@ -152,6 +154,7 @@
     "conditions": [
       {
         "id": "countdown_active",
+        "deprecated": true,
         "title": {
           "en": "A timer is !{{|not}} running (deprecated)",
           "nl": "Zandloper loopt !{{|niet}} (deprecated)"
@@ -238,6 +241,7 @@
       },
       {
         "id": "countdown_stop",
+        "deprecated": true,
         "title": {
           "en": "Stop a timer (deprecated)",
           "nl": "Stop een zandloper (deprecated)"
