@@ -45,8 +45,9 @@ We use Husky for a pre-commit Unit Test hook, so make sure to run `npm install` 
 # Roadmap
 
  - Write MORE tests
- - mock Homey npm module
- - LED ring support to make-visual a timer 
+ - Mock Homey npm module
+ - Add adding or substracting a fixed or random number of seconds
+ - Ability to pause a timer
  
 # Contact
 
