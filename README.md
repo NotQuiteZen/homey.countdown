@@ -3,6 +3,11 @@ The Countdown timers app for Athom's Homey provides hourglass-like timer cards i
 
 # Version log
 
+### 1.2.3
+
+  - Fixed a few bugs that would let the app crash
+
+
 ### 1.2.1
 
   - Added ledring-support, make a timer visible using the ledring
