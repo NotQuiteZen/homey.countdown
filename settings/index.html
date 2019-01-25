@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        
+    function getTimers() {
+        Homey.api('GET', '/timers/', (err, timers) => {
+          if (err) return Homey.alert(err);
+          
+          if (Object.keys(timers).length > 0) {
+            
+            contentdiv = document.getElementById("content");
+            
+            contentdiv.innerHTML = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
+            
+            Object.keys(timers).forEach(function (timer) {
+                contentdiv.insertAdjacentHTML( 'beforeend', timer + ': ' + timers[timer] + '<br>');
+            });
+            
+          } else {
+            document.getElementById("content").innerHTML = 'No timers found.';  
+          }
+        });
+        
+        setTimeout(function(){
+            getTimers();
+        }, 1000);
+      }
+
+      // a method named 'onHomeyReady' must be present in your code
+      function onHomeyReady( Homey ){
+
+          // Tell Homey we're ready to be displayed
+          Homey.ready();
+          getTimers();
+      }
+      </script>
+    <div id="content">
+        Loading...
+    </div>
+</body>
+</html>
