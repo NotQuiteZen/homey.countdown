@@ -3,6 +3,10 @@ The Countdown timers app for Athom's Homey provides hourglass-like timer cards i
 
 # Version log
 
+### 1.2.4
+
+  - Added app settingspage to start / pause / resume / stop timers and give an overview of timers
+
 ### 1.2.3
 
   - Fixed a few bugs that would let the app crash

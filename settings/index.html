@@ -8,38 +8,103 @@
         
     function getTimers() {
         Homey.api('GET', '/timers/', (err, timers) => {
-          if (err) return Homey.alert(err);
+            if (err) {
+                return Homey.alert(err);
+            } else {
+                if (Object.keys(timers).length > 0) {
+                  
+                  contentdiv = document.getElementById("content");
+                  contentdiv.innerHTML = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
+                  Object.keys(timers).forEach(function (timer) {
+                      contentdiv.insertAdjacentHTML( 'beforeend', timer + ': ' + timers[timer] + '<br>');
+                  });
+                  
+                } else {
+                  document.getElementById("content").innerHTML = 'No timers found.';  
+                }
+            
+                setTimeout(function(){
+                    getTimers();
+                }, 1000);
+            }
+        });
+      }
+
+    // a method named 'onHomeyReady' must be present in your code
+    function onHomeyReady( Homey ){
+        
+        var timernameElement = document.getElementById('timername');
+        var secondsElement = document.getElementById('seconds');
+        var startElement = document.getElementById('start');
+        var pauseElement = document.getElementById('pause');
+        var stopElement = document.getElementById('stop');
+
+        // Tell Homey we're ready to be displayed
+        Homey.ready();
+        
+        getTimers();
+        
+        startElement.addEventListener('click', function() {
           
-          if (Object.keys(timers).length > 0) {
-            
-            contentdiv = document.getElementById("content");
-            
-            contentdiv.innerHTML = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
-            
-            Object.keys(timers).forEach(function (timer) {
-                contentdiv.insertAdjacentHTML( 'beforeend', timer + ': ' + timers[timer] + '<br>');
-            });
-            
-          } else {
-            document.getElementById("content").innerHTML = 'No timers found.';  
-          }
+          var post_data = {};
+          post_data.timername = timernameElement.value;
+          post_data.seconds = secondsElement.value;
+        
+          Homey.api('POST', '/update_timer/', post_data, (err) => {
+              if (err) return Homey.alert(err);
+          });
+        
+    
         });
         
-        setTimeout(function(){
-            getTimers();
-        }, 1000);
-      }
-
-      // a method named 'onHomeyReady' must be present in your code
-      function onHomeyReady( Homey ){
-
-          // Tell Homey we're ready to be displayed
-          Homey.ready();
-          getTimers();
-      }
+        pauseElement.addEventListener('click', function() {
+          
+          var post_data = {};
+          post_data.timername = timernameElement.value;
+        
+          Homey.api('POST', '/pause_timer/', post_data, (err) => {
+              if (err) return Homey.alert(err);
+          });
+        
+    
+        });
+        
+        stopElement.addEventListener('click', function() {
+          
+          var post_data = {};
+          post_data.timername = timernameElement.value;
+          post_data.seconds = 0;
+        
+          Homey.api('POST', '/update_timer/', post_data, (err) => {
+              if (err) return Homey.alert(err);
+          });
+        
+    
+        });
+    }
       </script>
+    <div id="form">
+        <fieldset>
+            <legend>Create / update / delete a timer</legend>
+
+            <div class="field row">
+                <label for="timername">Timername</label>
+                <input id="timername" type="text" value="" />
+            </div>
+            <div class="field row">
+                <label for="seconds">Seconds</label>
+                <input id="seconds" type="text" pattern="\d*"/>
+            </div>
+            <br>
+            <button id="stop" class="right">Stop (set to 0)</button>
+            <button id="pause" class="right">Pause / resume</button>
+            <button id="start" class="right">Start</button>
+        </fieldset>
+        <br><br>
+    </div>
+    
     <div id="content">
-        Loading...
+        Loading timers...
     </div>
 </body>
 </html>
