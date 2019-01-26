@@ -12,12 +12,15 @@
                 return Homey.alert(err);
             } else {
                 if (Object.keys(timers).length > 0) {
-                  
-                  contentdiv = document.getElementById("content");
-                  contentdiv.innerHTML = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
-                  Object.keys(timers).forEach(function (timer) {
-                      contentdiv.insertAdjacentHTML( 'beforeend', timer + ': ' + timers[timer] + '<br>');
+                    
+                  var html = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
+                  html += "<table style=\"width:100%\"><tr><th>Timername</th><th>Seconds</th></tr>";
+                   Object.keys(timers).forEach(function (timer) {
+                      html += "<tr onclick=\"populateForm('" + timer + "')\"><td>" + timer + "</td><td>" + timers[timer] + "</td></tr>";
                   });
+                  html += "</table>";
+                  
+                  document.getElementById("content").innerHTML = html;  
                   
                 } else {
                   document.getElementById("content").innerHTML = 'No timers found.';  
@@ -28,7 +31,15 @@
                 }, 1000);
             }
         });
-      }
+    }
+    
+    function populateForm(timername) {
+        var timernameElement = document.getElementById('timername');
+        var secondsElement = document.getElementById('seconds');
+        
+        timernameElement.value = timername;
+        secondsElement.value = '';
+    }
 
     // a method named 'onHomeyReady' must be present in your code
     function onHomeyReady( Homey ){
@@ -85,7 +96,7 @@
       </script>
     <div id="form">
         <fieldset>
-            <legend>Create / update / delete a timer</legend>
+            <legend>Create / update / stop a timer</legend>
 
             <div class="field row">
                 <label for="timername">Timername</label>
@@ -105,6 +116,13 @@
     
     <div id="content">
         Loading timers...
+    </div>
+    
+    <div>
+        <br><br>
+        <small>
+            <em style="color: #ccc;">Unused timers are removed automatically on app restart!</em>
+        </small>
     </div>
 </body>
 </html>

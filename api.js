@@ -40,12 +40,16 @@ module.exports = [
         let timerName = args.body.timername;
         let timerSeconds = args.body.seconds;
         
+        if (! Timers.validateName(timerName)) {
+          return callback('Invalid timername, use: a-z, 0-9, space, min or underscore');
+        }
+        
         // Add a new timer
         if (Timers.add(timerName) && Timers.setTime(timerName, timerSeconds) && Timers.start(timerName)) {
           return callback(null, true);
         }
 
-        return callback(null, false);
+        return callback('Someting went wrong when adding the timer');
       } catch(err) {
         return callback(err);
       }
