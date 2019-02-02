@@ -1,6 +1,6 @@
 {
   "id": "homey.countdown",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -191,6 +191,7 @@
     "actions": [
       {
         "id": "countdown_update",
+        "deprecated": true,
         "title": {
           "en": "Start / update a timer",
           "nl": "Draai een nieuwe zandloper om"
