@@ -12,6 +12,13 @@ class App {
  */
 const Homey = {
     App: App,
+    LedringAnimation: function(){
+        return {
+            register: function () {
+                return this;
+            },
+        }
+    },
     FlowCardTrigger: function () {
         return {
             register: function () {
