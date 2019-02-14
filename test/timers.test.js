@@ -43,7 +43,7 @@ describe('Timers', () => {
     });
 
     it('must deny a malformed timername', () => {
-        let validateResult = Timers.validateName('not_allowed characters');
+        let validateResult = Timers.validateName('not\'allowed%^&*(characters');
         assert.equal(validateResult, false);
     });
 
