@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/Milanzor/homey.countdown#readme",
   "devDependencies": {
-    "@milanzor/homey-mock": "^1.0.1",
+    "@milanzor/homey-mock": "^1.1.0",
     "chai": "^4.2.0",
     "husky": "^1.3.1",
     "mocha": "^5.2.0",
