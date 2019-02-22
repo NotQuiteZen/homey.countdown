@@ -4,11 +4,11 @@ const assert = require('assert');
 // Fetch moch
 const mock = require('mock-require');
 
-// Mock homey
-mock('homey', require('./mock/homey'));
-
 // Fetch 'homey' ;)
-const Homey = require('homey');
+const Homey = require('@milanzor/homey-mock');
+
+// Mock homey
+mock('homey', Homey);
 
 // Fetch our timers
 const {Timers, timerEvents} = require('../lib/timers');
