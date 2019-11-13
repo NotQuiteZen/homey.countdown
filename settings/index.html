@@ -84,7 +84,7 @@
           
           var post_data = {};
           post_data.timername = timernameElement.value;
-          post_data.seconds = 0;
+          post_data.seconds = -1;
         
           Homey.api('POST', '/update_timer/', post_data, (err) => {
               if (err) return Homey.alert(err);
@@ -107,7 +107,7 @@
                 <input id="seconds" type="text" pattern="\d*"/>
             </div>
             <br>
-            <button id="stop" class="right">Stop (set to 0)</button>
+            <button id="stop" class="right">Stop</button>
             <button id="pause" class="right">Pause / resume</button>
             <button id="start" class="right">Start</button>
         </fieldset>

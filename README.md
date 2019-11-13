@@ -7,6 +7,7 @@ The Countdown timers app for Athom's Homey provides hourglass-like timer cards i
 
   - Added flowcards to pause / resume timers
   - Bugfix: Timers are now directly available in autocomplete cards after adding
+  - Bugfix: Manually stopping a timer will not trigger the "timer is empty" trigger
 
 ### 1.2.5
 
