@@ -1,6 +1,6 @@
 {
   "id": "homey.countdown",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -8,7 +8,7 @@
   },
   "description": {
     "en": "Countdown timers for Homey",
-    "nl": "Zandlopers voor Homey"
+    "nl": "Countdown timers voor Homey"
   },
   "category": [
     "tools"
