@@ -1,7 +1,7 @@
 {
   "id": "homey.countdown",
-  "version": "1.2.7",
-  "compatibility": ">=1.5.0",
+  "version": "1.3.0",
+  "compatibility": ">=2.0.2",
   "sdk": 2,
   "name": {
     "en": "Countdown timers"
