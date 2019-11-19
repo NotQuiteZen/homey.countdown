@@ -1,14 +1,14 @@
 {
   "id": "homey.countdown",
-  "version": "1.2.6",
-  "compatibility": ">=1.5.0",
+  "version": "1.2.9",
+  "compatibility": ">=2.0.2",
   "sdk": 2,
   "name": {
     "en": "Countdown timers"
   },
   "description": {
     "en": "Countdown timers for Homey",
-    "nl": "Zandlopers voor Homey"
+    "nl": "Countdown timers voor Homey"
   },
   "category": [
     "tools"
@@ -304,6 +304,57 @@
           "en": "Stop ledring animation",
           "nl": "Stop ledring-weergave"
         }
+      },
+      {
+        "id": "countdown_pause_autocomplete",
+        "title": {
+          "en": "Pause a timer",
+          "nl": "Pauzeer een zandloper"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
+        "id": "countdown_resume_autocomplete",
+        "title": {
+          "en": "Resume a timer",
+          "nl": "Hervat een zandloper"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
+      },
+      {
+        "id": "countdown_pause_or_resume_autocomplete",
+        "title": {
+          "en": "Pause/resume a timer",
+          "nl": "Pauzeer/hervat een zandloper"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Timer name",
+              "nl": "Naam zandloper"
+            }
+          }
+        ]
       }
     ]
   },

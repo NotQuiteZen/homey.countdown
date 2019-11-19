@@ -1,0 +1,11 @@
+{
+  "1.2.7": {
+    "en": "Added pause / resume and dont trigger when stopped manually"
+  },
+  "1.2.8": {
+    "en": "Pause / resume timer + bugfixes"
+  },
+  "1.2.9": {
+    "en": "Fixed condition card bug and minor improvements"
+  }
+}

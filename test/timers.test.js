@@ -74,7 +74,7 @@ describe('Timers', () => {
         assert.equal(timerEvents instanceof eventEmitter, true);
     });
 
-    it('must be able to emit event timer.start', (done) => {
+    it('must emit event timer.start', (done) => {
 
         Timers.stopAll();
 
@@ -115,6 +115,39 @@ describe('Timers', () => {
         Timers.add('eventtesttimetick', 1);
         Timers.start('eventtesttimetick');
     });
+
+    it('must emit event timer.pause', (done) => {
+
+        Timers.stopAll();
+
+        timerEvents.once('timer.pause', function (data) {
+            Timers.stopAll();
+            assert.equal(data.name === 'testpausetimer', true);
+            done();
+        });
+
+        Timers.add('testpausetimer', 15);
+        Timers.start('testpausetimer');
+        Timers.pause('testpausetimer');
+    });
+
+
+    it('must emit event timer.resume', (done) => {
+
+        Timers.stopAll();
+
+        timerEvents.once('timer.resume', function (data) {
+            Timers.stopAll();
+            assert.equal(data.name === 'testresumetimer', true);
+            done();
+        });
+
+        Timers.add('testresumetimer', 15);
+        Timers.start('testresumetimer');
+        Timers.pause('testresumetimer');
+        Timers.resume('testresumetimer');
+    });
+
     it('must emit event timer.clear', (done) => {
 
         Timers.stopAll();
