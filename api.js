@@ -14,10 +14,9 @@ module.exports = [
     },
     {
         method: 'POST',
-        path: '/pause_timer/',
+        path: '/toggle_timer/',
         fn: async (args, callback) => {
             try {
-
                 let timerName = args.body.timername;
 
                 // If counting
@@ -29,6 +28,48 @@ module.exports = [
                     }
                 } else {
 
+                    // Not counting, start it
+                    if (Timers.resume(timerName)) {
+                        return callback(null, true);
+                    }
+                }
+
+                return callback(null, false);
+            } catch (err) {
+                return callback(err);
+            }
+        }
+    },
+    {
+        method: 'POST',
+        path: '/pause_timer/',
+        fn: async (args, callback) => {
+            try {
+                let timerName = args.body.timername;
+
+                // If counting
+                if (Timers.isCounting(timerName)) {
+                    // Pause it
+                    if (Timers.pause(timerName)) {
+                        return callback(null, true);
+                    }
+                }
+
+                return callback(null, false);
+            } catch (err) {
+                return callback(err);
+            }
+        }
+    },
+    {
+        method: 'POST',
+        path: '/resume_timer/',
+        fn: async (args, callback) => {
+            try {
+                let timerName = args.body.timername;
+
+                // If counting
+                if (!Timers.isCounting(timerName)) {
                     // Not counting, start it
                     if (Timers.resume(timerName)) {
                         return callback(null, true);
