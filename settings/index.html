@@ -5,45 +5,45 @@
 </head>
 <body>
     <script type="text/javascript">
-        
+
     function getTimers() {
         Homey.api('GET', '/timers/', (err, timers) => {
             if (err) {
                 return Homey.alert(err);
             } else {
                 if (Object.keys(timers).length > 0) {
-                    
+
                   var html = 'Active timers: ' + Object.keys(timers).length + '<br><br>';
                   html += "<table style=\"width:100%\"><tr><th>Timername</th><th>Seconds</th></tr>";
                    Object.keys(timers).forEach(function (timer) {
                       html += "<tr onclick=\"populateForm('" + timer + "')\"><td>" + timer + "</td><td>" + timers[timer] + "</td></tr>";
                   });
                   html += "</table>";
-                  
-                  document.getElementById("content").innerHTML = html;  
-                  
+
+                  document.getElementById("content").innerHTML = html;
+
                 } else {
-                  document.getElementById("content").innerHTML = 'No timers found.';  
+                  document.getElementById("content").innerHTML = 'No timers found.';
                 }
-            
+
                 setTimeout(function(){
                     getTimers();
                 }, 1000);
             }
         });
     }
-    
+
     function populateForm(timername) {
         var timernameElement = document.getElementById('timername');
         var secondsElement = document.getElementById('seconds');
-        
+
         timernameElement.value = timername;
         secondsElement.value = '';
     }
 
     // a method named 'onHomeyReady' must be present in your code
     function onHomeyReady( Homey ){
-        
+
         var timernameElement = document.getElementById('timername');
         var secondsElement = document.getElementById('seconds');
         var startElement = document.getElementById('start');
@@ -52,45 +52,45 @@
 
         // Tell Homey we're ready to be displayed
         Homey.ready();
-        
+
         getTimers();
-        
+
         startElement.addEventListener('click', function() {
-          
+
           var post_data = {};
           post_data.timername = timernameElement.value;
           post_data.seconds = secondsElement.value;
-        
+
           Homey.api('POST', '/update_timer/', post_data, (err) => {
               if (err) return Homey.alert(err);
           });
-        
-    
+
+
         });
-        
+
         pauseElement.addEventListener('click', function() {
-          
+
           var post_data = {};
           post_data.timername = timernameElement.value;
-        
-          Homey.api('POST', '/pause_timer/', post_data, (err) => {
+
+          Homey.api('POST', '/toggle_timer/', post_data, (err) => {
               if (err) return Homey.alert(err);
           });
-        
-    
+
+
         });
-        
+
         stopElement.addEventListener('click', function() {
-          
+
           var post_data = {};
           post_data.timername = timernameElement.value;
           post_data.seconds = -1;
-        
+
           Homey.api('POST', '/update_timer/', post_data, (err) => {
               if (err) return Homey.alert(err);
           });
-        
-    
+
+
         });
     }
       </script>
@@ -113,11 +113,11 @@
         </fieldset>
         <br><br>
     </div>
-    
+
     <div id="content">
         Loading timers...
     </div>
-    
+
     <div>
         <br><br>
         <small>
